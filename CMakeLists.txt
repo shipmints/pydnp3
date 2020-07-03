@@ -34,18 +34,15 @@ if(NOT CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 endif()
 
 add_subdirectory(deps/pybind11)
-add_subdirectory(deps/dnp3)
+add_subdirectory(deps/opendnp3)
 
 # include paths for all the local libraries
-include_directories(deps/dnp3/cpp/libs/include)
-include_directories(deps/dnp3/cpp/libs/src)
+include_directories(deps/opendnp3/cpp/libs/include)
+include_directories(deps/opendnp3/cpp/libs/src)
 
 # asio
-include_directories(deps/dnp3/deps/asio/asio/include)
+include_directories(deps/opendnp3/deps/asio/asio/include)
 add_definitions(-DASIO_STANDALONE)
 
 pybind11_add_module(pydnp3 MODULE src/pydnp3.cpp src/pydnp3asiodnp3.cpp src/pydnp3asiopal.cpp src/pydnp3opendnp3.cpp src/pydnp3openpal.cpp)
 target_link_libraries(pydnp3 PRIVATE asiopal asiodnp3 openpal opendnp3)
-
-
-

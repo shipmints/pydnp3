@@ -57,8 +57,8 @@ class CMakeBuild(build_ext):
             os.makedirs(self.build_temp)
 
         setup_path = os.path.dirname(os.path.abspath(__file__))
-        if not "<string>" in open(os.path.join(setup_path, 'deps', 'dnp3', 'cpp', 'libs', 'include', 'asiodnp3', 'IMasterOperations.h')).read():
-            dnp3_path = os.path.join(setup_path, 'deps', 'dnp3')
+        if not "<string>" in open(os.path.join(setup_path, 'deps', 'opendnp3', 'cpp', 'libs', 'include', 'asiodnp3', 'IMasterOperations.h')).read():
+            dnp3_path = os.path.join(setup_path, 'deps', 'opendnp3')
             patch_path = os.path.join(setup_path, 'imasteroperations.patch')
 
             subprocess.check_call(['git', 'apply', patch_path], cwd=dnp3_path)

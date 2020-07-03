@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -x
+#!/bin/bash -px
 
 # manually purge submodule reference in .gitmodules
 # may need to purge submodule reference in .git/config

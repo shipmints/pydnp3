@@ -1,7 +1,8 @@
-[submodule "deps/dnp3"]
-	path = deps/dnp3
-	url = https://github.com/automatak/dnp3.git
 [submodule "deps/pybind11"]
 	path = deps/pybind11
 	url = https://github.com/shipmints/pybind11.git
 	branch = allow_pointer_copies
+[submodule "deps/opendnp3"]
+	path = deps/opendnp3
+	url = https://github.com/shipmints/opendnp3.git
+	branch = def-analog-g30v5
